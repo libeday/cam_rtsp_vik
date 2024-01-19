@@ -5,6 +5,10 @@ CamReceiver::CamReceiver() {
   depth_topic = "toDepthTopic";
   ir_topic = "toIrTopic";
 
+  ros::param::get("/_color_topic", color_topic);
+  ros::param::get("/_depth_topic",   depth_topic);
+  ros::param::get("/_ir_topic",   ir_topic);
+
   m_get_color = false;
   m_get_depth = false;
   m_get_ir = false;
